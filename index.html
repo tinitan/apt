@@ -99,6 +99,56 @@ html { overflow-y:scroll; overflow-x:hidden; }
   }
 }
 
+.squirrel {
+  background-image: url(squirrel.png);
+  
+  width: 60px;
+  height: 40px;
+  background-size: 60px 40px;
+  will-change: background-position;
+  -webkit-animation-name: walk;
+          animation-name: walk;
+  -webkit-animation-timing-function: steps(10);
+          animation-timing-function: steps(10);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.squirrel--one {
+  -webkit-animation-duration: 26s;
+          animation-duration: 26s;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+@-webkit-keyframes walk {
+  100% {
+    background-position: -900px 0;
+  }
+}
+
+@keyframes walk {
+  100% {
+    background-position: -900px 0;
+  }
+}
+
+@keyframes walk {
+  0% {
+    transform: translateX(700px)translateY(245px) scale(0.3);
+  }
+  25% {
+    transform: translateX(745px) translateY(280px) scale(0.5);
+  }
+  50% {
+    transform: translateX(685px) translateY(300px) scale(1.0);
+  }
+  75% {
+    transform: translateX(685px) translateY(285px) scale(0.8);
+  }
+  100% {
+    transform: translateX(755px) translateY(260px) scale(0.5);
+  }
+}
 
     </style>
 
@@ -109,16 +159,11 @@ html { overflow-y:scroll; overflow-x:hidden; }
 <h1>아름다운 아파트</h1>
 
 <div class="bird bird--one"></div>
-
-
 <div class="bird bird--two"></div>
-
-
 <div class="bird bird--three"></div>
-
-
 <div class="bird bird--four"></div>
 
+<div class="squirrel squirrel--one"></div>
 </div>
 </body>
 </html>
