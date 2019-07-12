@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 
@@ -26,7 +25,7 @@ html { overflow-y:scroll; overflow-x:hidden; }
   /*width: 1600px;*/
   max-width:100%;
   min-height: 600px;
-  padding : 3px; border:solid 3px red;
+  padding : 3px; /*border:solid 3px red;*/
   background-size: 100% 100%;
   /*position: absolute;
   z-index: -999;*/
@@ -158,14 +157,40 @@ html { overflow-y:scroll; overflow-x:hidden; }
 
 <body translate="no">
 <div class="container">
-<h1>아름다운 아파트</h1>
+<h1 style="color:white">아름다운 아파트</h1>
+<h3 style="color:white">다람쥐 클릭 노래 더블클릭 종료</h3>
 
 <div class="bird bird--one"></div>
 <div class="bird bird--two"></div>
 <div class="bird bird--three"></div>
 <div class="bird bird--four"></div>
+<p class="p squirrel squirrel--one" onclick="playAudio()" ondblclick="pauseAudio()"></div></p>
 
-<div class="squirrel squirrel--one"></div>
-</div>
+</div><!-- container end -->
+
+<audio id="myAudio">
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="나그대에게.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+  
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+  
+} 
+</script>
+
+
+</body>
+
+
 </body>
 </html>
